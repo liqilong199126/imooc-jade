@@ -33,7 +33,7 @@
 
 **命令行：jade -P -w index.jade 实时监控jade文件，自动编译为不压缩的html文件，方便实时查看写的jade代码和html的比较**
 
-## jade标签写法
+ ## jade标签写法
 
 index.jade
 
@@ -329,12 +329,12 @@ index.jade
 7     <p>以'-'开头写服务器端代码</p>
 8     <p>TEST1</p>
 9     <p>test1</p>
-10     <!--转义引用，(#{表达式} 等价于 =表达式)-->
-11     <p>&lt;div&gt;&lt;p&gt;变量调用&lt;/p&gt;&lt;/div&gt;</p>
-12     <p>&lt;div&gt;&lt;p&gt;变量调用&lt;/p&gt;&lt;/div&gt;</p>
-13     <!--非转义引用，(!{表达式}等价于 !=表达式)-->
-14     <p><div><p>变量调用</p></div></p>
-15     <p><div><p>变量调用</p></div></p>
+10    <!--转义引用，(#{表达式} 等价于 =表达式)-->
+11    <p>&lt;div&gt;&lt;p&gt;变量调用&lt;/p&gt;&lt;/div&gt;</p>
+12    <p>&lt;div&gt;&lt;p&gt;变量调用&lt;/p&gt;&lt;/div&gt;</p>
+13    <!--非转义引用，(!{表达式}等价于 !=表达式)-->
+14    <p><div><p>变量调用</p></div></p>
+15    <p><div><p>变量调用</p></div></p>
 16   </body>
 17 </html>
 ```
@@ -364,8 +364,11 @@ p \!{title}
 可以传递json数据
 
 可以对表达式进行进行操作，例如：
+
  ```1 -var c='test1' ; 2 p #{c.toUpperCase()} ```
+ 
 编译成html为：
+
 ```<p>TEST1</p>```
 ## jade多行文本显示 
 
@@ -390,11 +393,11 @@ p#id2.className.
  
 ```
 p#id3
-       |222
-       strong 888
-       |3333
-       span 9999
-       |444
+ |222
+ strong 888
+ |3333
+ span 9999
+ |444
 ```
 
 
@@ -418,11 +421,11 @@ ul
  
 ```
 <ul>
-      <li>1</li>
-      <li>3</li>
-      <li>5</li>
-      <li>7</li>
-      <li>9</li>
+    <li>1</li>
+    <li>3</li>
+    <li>5</li>
+    <li>7</li>
+    <li>9</li>
 </ul>
 ```
 
@@ -461,15 +464,15 @@ each item in arry
     
 ```
 <p>0:1</p>
-    <p>1:3</p>
-    <p>2:5</p>
-    <p>3:7</p>
-    <p>4:9</p>
-    <p>1</p>
-    <p>3</p>
-    <p>5</p>
-    <p>7</p>
-    <p>9</p>
+<p>1:3</p>
+<p>2:5</p>
+<p>3:7</p>
+<p>4:9</p>
+<p>1</p>
+<p>3</p>
+<p>5</p>
+<p>7</p>
+<p>9</p>
 ```
 
 #### 遍历json数据
@@ -659,11 +662,11 @@ mixin parameterList(name,...items)
     
 ```
 mixin bags
-        div.allBags
-           p 书包
-           p 文具包
-           p 公文包
-           p 工具包
+    div.allBags
+        p 书包
+        p 文具包
+        p 公文包
+        p 工具包
       //调用
      
       mixin getBags(name)
@@ -677,12 +680,12 @@ mixin bags
            
 ```
 <P class="back">请列举包的种类</P>
-            <div class="allBags">
-              <p>书包</p>
-              <p>文具包</p>
-              <p>公文包</p>
-              <p>工具包</p>
-            </div>
+<div class="allBags">
+    <p>书包</p>
+    <p>文具包</p>
+    <p>公文包</p>
+    <p>工具包</p>
+</div>
 ```
 
 ### 4.mixin可以从外部传入代码块
@@ -868,5 +871,3 @@ footer.jade
 ```
 div 页脚模块
 ```
-@liqilong199126
-Commit new file
